@@ -7,14 +7,9 @@ const initialPersons = [
   { id: 6, name: "Karan", age: 24, city: "Jaipur" },
 ];
 
-const persons = initialPersons.map(person => {
+const persons = initialPersons.reduce((average,person) =>{
+  return average + person.age
+},0)
 
-  return {
-    ...person,
-    name: `${person.name} (${person.age})`
-  }
-
-}
-)
-
-console.log(persons)
+const aver = persons/initialPersons.length
+console.log(aver)
