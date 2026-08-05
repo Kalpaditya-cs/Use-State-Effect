@@ -7,9 +7,11 @@ const initialPersons = [
   { id: 6, name: "Karan", age: 24, city: "Jaipur" },
 ];
 
-const persons = initialPersons.reduce((average,person) =>{
-  return average + person.age
-},0)
-
-const aver = persons/initialPersons.length
-console.log(aver)
+const grouped = initialPersons.reduce((result,person) => {
+  if(!result[person.city]){
+    result[person.city] = []
+  }
+  result[person.city].push(person.name)
+  return result
+},{})
+console.log(grouped)
