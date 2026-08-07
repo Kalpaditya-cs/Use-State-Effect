@@ -7,8 +7,8 @@ const initialPersons = [
   { id: 6, name: "Karan", age: 24, city: "Jaipur" },
 ];
 
-const persons = initialPersons.find((person)=>
-   person.city === "Jaipur" && person.age>24
-)
+const persons = initialPersons.map((person) =>
+person.city==="Jaipur" ? {...person, age: person.age+2} : person)
+
 
 console.log(persons)

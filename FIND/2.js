@@ -8,7 +8,7 @@ const initialPersons = [
 ];
 
 const persons = initialPersons.find((person)=>
-   person.city === "Jaipur" && person.age>24
+   person.name.startsWith("A") && person.age<20
 )
 
 console.log(persons)

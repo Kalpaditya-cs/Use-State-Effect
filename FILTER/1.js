@@ -7,8 +7,7 @@ const initialPersons = [
   { id: 6, name: "Karan", age: 24, city: "Jaipur" },
 ];
 
-const persons = initialPersons.find((person)=>
-   person.city === "Jaipur" && person.age>24
-)
+const persons = initialPersons.filter((person) =>
+person.city === "Jaipur" && person.age>=24)
 
 console.log(persons)
